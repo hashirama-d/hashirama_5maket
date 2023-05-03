@@ -2,5 +2,21 @@ $section-bg-dark: #16151b;
 $brand-font: 'Quicksand', sans-serif;
 $main-font: 'Source Sans Pro', sans-serif;
 $dark: #16151b;
+$primary: #008ed6;
 $body-color: #ffffff;
 
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        //xxl: 1200px,
+);
+
+$container-max-widths: (
+        md: 738px,
+        lg: 962px,
+        xl: 1170px,
+        //xxl: 1200px,
+);

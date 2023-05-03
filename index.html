@@ -12,17 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">-->
     <!--    Own styles -->
     <link rel="stylesheet" href="css/style.css">
     <title>Lucid - one page theme</title>
 </head>
 <body>
     <header class="home">
-        <div class="container gx-sm-0">
+        <div class="home-bg-placeholder"></div>
+        <div class="container gx-md-0">
             <div class="home__inner">
                 <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-                    <div class="container gx-sm-0">
+                    <div class="container gx-md-0">
                         <a class="navbar-brand col-2" href="#">Lucid
                             <span class="navbar-brand-subtitle"> onepage <br> theme</span></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -31,7 +32,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-2 mb-2 mb-lg-0 m-auto">
+                            <ul class="navbar-nav me-0 mb-2 mb-lg-0 m-auto">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#"><span>Home</span></a>
                                 </li>
@@ -54,9 +55,28 @@
                         </div>
                     </div>
                 </nav>
+                <div class="home__banner">
+                    <div class="home__banner-text col-md-6 col-sm-7">
+                        <div class="home__banner-tagline">Introducing Lucid Theme</div>
+                        <h1 class="home__banner-title">Carefully crafted and beautiful landing page.</h1>
+                        <p class="home__banner-description">Etiam ullamcorper et turpis eget hendrerit. Praesent varius risus mi, at elementum magna ultricies accumsan. Cras venenatis lacus sed dolor placerat tempus. Morbi blandit at neque ut imperdiet.</p>
+                        <div class="home__banner-buttons">
+                            <button type="button" class="btn btn-primary">Download now</button>
+                            <button type="button" class="btn btn-outline">View features</button>
+                        </div>
+                    </div>
+                    <div class="home__banner-photo col-md-6 col-sm-5">
+                        <img src="images/devices.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+<!--    <section class="features"></section>-->
+    <!--    Jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+            crossorigin="anonymous"></script>
 
     <!--    Bootstrap scripts  -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

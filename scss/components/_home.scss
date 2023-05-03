@@ -1,39 +1,133 @@
 .home {
+  display: flex;
   position: relative;
   background-color: $section-bg-dark;
-
   background-repeat: no-repeat;
   background-size: cover;
-  height: 640px;
-  &::after {
+  //height: 640px;
+  &__inner {
+    display: flex;
+  }
+  &__banner {
+    z-index: 10;
+    padding: 150px 0 110px;
+    @media (max-width: map-get($grid-breakpoints, "xl")) {
+      padding: 120px 0 50px;
+    }
+    @media (max-width: map-get($grid-breakpoints, "md")) {
+      padding: 90px 0 50px;
+    }
+    display: flex;
+    &-text {
+      padding-right: 100px;
+      @media (max-width: map-get($grid-breakpoints, "lg")) {
+        padding-right: 40px;
+      }
+      @media (max-width: map-get($grid-breakpoints, "md")) {
+        padding-right: 15px;
+      }
+    }
+    &-tagline {
+      text-transform: uppercase;
+      padding-top: 7px;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 700;
+      color: #008ed6;
+      letter-spacing: 0.1em;
+      @media (max-width: map-get($grid-breakpoints, "lg")) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    &-title {
+      font-size: 48px;
+      line-height: 48px;
+      padding-top: 20px;
+      font-weight: 600;
+      margin-bottom: 0;
+      @media (max-width: map-get($grid-breakpoints, "lg")) {
+        font-size: 32px;
+        line-height: 32px;
+      }
+    }
+    &-description {
+      padding-top: 20px;
+      font-size: 18px;
+      line-height: 26px;
+      color: #999999;
+      @media (max-width: map-get($grid-breakpoints, "lg")) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &-buttons {
+      padding-top: 45px;
+      @media (max-width: map-get($grid-breakpoints, "lg")) {
+        padding-top: 15px;
+      }
+      & button+button {
+        margin-left: 18px;
+      }
+    }
+    &-photo {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 480px;
+        height: 600px;
+        position: absolute;
+        top: -50px;
+        z-index: 5;
+        right: 0;
+        @media (max-width: map-get($grid-breakpoints, "lg")) {
+          width: 360px;
+          height: 480px;
+        }
+        @media (max-width: map-get($grid-breakpoints, "md")) {
+          width: 240px;
+          height: 320px;
+          top: -25px;
+          right: 20px;
+        }
+        @media (max-width: map-get($grid-breakpoints, "sm")) {
+          display: none;
+        }
+      }
+    }
+  }
+  &-bg-placeholder {
+    position: absolute;
     width: 100%;
     height: 930px;
-    position: absolute;
-    content: "";
     background-image: url("../images/home-bg.png");
     background-repeat: no-repeat;
+    background-size: cover;
     opacity: 0.1;
-    top: 0;
-    left: 0;
-    background-size: contain;
-    @media (min-width: 1400px) {
-      background-size: cover;
-
+    z-index: 0;
+    @media (min-width: 1170px) {
       height: 100%;
     }
   }
   .navbar {
+    height: 96px;
+    &.scrolled {
+      background-color: $dark;
+    }
     .navbar-nav {
       .nav-link {
+        padding: 10px 0 10px 20px;
         font-weight: 600;
-        margin-left: 20px;
+        //margin-left: 20px;
+        letter-spacing: 0.028em;
         color: #ffffff;
         span {
           position: relative;
           &::before {
             content: "";
             position: absolute;
-            bottom: -2px;
+            bottom: -10px;
             left: 0;
             width: calc(50% - 1px);
             height: 2px;
@@ -43,7 +137,7 @@
           &::after {
             content: "";
             position: absolute;
-            bottom: -2px;
+            bottom: -10px;
             right: 0;
             width: calc(50% - 1px);
             height: 2px;
@@ -64,12 +158,22 @@
       line-height: 58px;
       text-transform: uppercase;
       align-items: center;
+      letter-spacing: 0.035em;
       &-subtitle {
         font-size: 9px;
         line-height: 10px;
-        letter-spacing: 1.4px;
+        letter-spacing: 1px;
         color: #505055;
         padding-left: 6px;
+      }
+    }
+    &-collapse {
+      //z-index: 20;
+      //padding-right: 10px;
+      padding-bottom: 5px;
+      @media (max-width: 991px){
+        background-color: $dark;
+        border: 1px solid #ffffff;
       }
     }
   }
