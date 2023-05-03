@@ -1,7 +1,9 @@
 
 @import "components/reboot";
 @import "components/variables";
+@import "components/mixins";
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "components/buttons";
 @import "components/body";
 @import "components/home";
+@import "components/features";

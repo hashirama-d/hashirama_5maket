@@ -1,0 +1,66 @@
+.features {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  z-index: 10;
+  border-bottom: 1px solid #ededed;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__subtitle {
+    @include section_subtitle();
+    padding-top: 60px;
+  }
+  &__title {
+    @include font_size-lh-fw(36px, 48px, 600);
+    padding-top: 10px;
+    color: #000000;
+    @media (max-width: map-get($grid-breakpoints, "md")) {
+      @include font_size-lh-fw(26px, 36px, 600);
+    }
+  }
+  &__separator {
+    margin-top: 22px;
+    position: relative;
+    @include width_height(42px, 2px);
+    background-color: $primary;
+    &::before {
+      position: absolute;
+      content: "";
+      @include width_height(2px, 2px);
+      left: calc(50% - 1px);
+      background-color: #ffffff;
+    }
+  }
+  &__items {
+    padding-top: 43px;
+    padding-bottom: 70px;
+
+  }
+  &__item {
+    padding-top: 30px;
+    //background-color: red;
+    text-align: center;
+    //border: 1px solid black;
+    //padding: 10px;
+    &-logo {
+      @include width_height(90px, 90px);
+      border: 1px solid #e0e0e0;
+      border-radius: 50%;
+      & img {
+        @include width_height(45px, 45px);
+      }
+    }
+    &-title {
+      padding-top: 30px;
+      @include font_size-lh-fw(24px, 24px, 400);
+      color: #000000;
+    }
+    &-description {
+      @include plain_text();
+      padding-top: 15px;
+    }
+  }
+}

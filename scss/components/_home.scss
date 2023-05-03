@@ -4,7 +4,6 @@
   background-color: $section-bg-dark;
   background-repeat: no-repeat;
   background-size: cover;
-  //height: 640px;
   &__inner {
     display: flex;
   }
@@ -28,38 +27,18 @@
       }
     }
     &-tagline {
-      text-transform: uppercase;
-      padding-top: 7px;
-      font-size: 14px;
-      line-height: 18px;
-      font-weight: 700;
-      color: #008ed6;
-      letter-spacing: 0.1em;
-      @media (max-width: map-get($grid-breakpoints, "lg")) {
-        font-size: 12px;
-        line-height: 16px;
-      }
+      @include section_subtitle();
     }
     &-title {
-      font-size: 48px;
-      line-height: 48px;
       padding-top: 20px;
-      font-weight: 600;
+      @include font_size-lh-fw(48px, 48px, 600);
       margin-bottom: 0;
       @media (max-width: map-get($grid-breakpoints, "lg")) {
-        font-size: 32px;
-        line-height: 32px;
+        @include font_size-lh-fw(32px, 32px, 600);
       }
     }
     &-description {
-      padding-top: 20px;
-      font-size: 18px;
-      line-height: 26px;
-      color: #999999;
-      @media (max-width: map-get($grid-breakpoints, "lg")) {
-        font-size: 16px;
-        line-height: 24px;
-      }
+      @include plain_text();
     }
     &-buttons {
       padding-top: 45px;
@@ -75,19 +54,16 @@
       display: flex;
       justify-content: center;
       img {
-        width: 480px;
-        height: 600px;
+        @include width_height(480px, 600px);
         position: absolute;
         top: -50px;
         z-index: 5;
         right: 0;
         @media (max-width: map-get($grid-breakpoints, "lg")) {
-          width: 360px;
-          height: 480px;
+          @include width_height(360px, 480px);
         }
         @media (max-width: map-get($grid-breakpoints, "md")) {
-          width: 240px;
-          height: 320px;
+          @include width_height(240px, 320px);
           top: -25px;
           right: 20px;
         }
@@ -99,14 +75,13 @@
   }
   &-bg-placeholder {
     position: absolute;
-    width: 100%;
-    height: 930px;
+    @include width_height(100%, 930px);
     background-image: url("../images/home-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.1;
     z-index: 0;
-    @media (min-width: 1170px) {
+    @media (min-width: map-get($grid-breakpoints, "xl")) {
       height: 100%;
     }
   }
@@ -119,30 +94,23 @@
       .nav-link {
         padding: 10px 0 10px 20px;
         font-weight: 600;
-        //margin-left: 20px;
         letter-spacing: 0.028em;
         color: #ffffff;
         span {
           position: relative;
-          &::before {
+          &::before, &::after {
             content: "";
             position: absolute;
             bottom: -10px;
-            left: 0;
-            width: calc(50% - 1px);
-            height: 2px;
+            @include width_height(calc(50% - 1px), 2px);
             background-color: #008ed6;
             opacity: 0;
           }
+          &::before {
+            left: 0;
+          }
           &::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
             right: 0;
-            width: calc(50% - 1px);
-            height: 2px;
-            background-color: #008ed6;
-            opacity: 0;
           }
           &:hover::before, &:hover::after {
             opacity: 1;
@@ -153,15 +121,12 @@
     &-brand {
       display: flex;
       font-family: $brand-font;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 58px;
+      @include font_size-lh-fw(24px, 58px, 700);
       text-transform: uppercase;
       align-items: center;
       letter-spacing: 0.035em;
       &-subtitle {
-        font-size: 9px;
-        line-height: 10px;
+        @include font_size-lh-fw(9px, 10px, 400);
         letter-spacing: 1px;
         color: #505055;
         padding-left: 6px;
