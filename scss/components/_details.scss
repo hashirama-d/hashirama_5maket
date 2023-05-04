@@ -1,0 +1,100 @@
+.details {
+  &__item {
+    padding-top: 45px;
+    padding-bottom: 60px;
+    @media (max-width: map-get($grid-breakpoints, "md")) {
+      padding-top: 25px;
+    }
+    &-inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @media (max-width: map-get($grid-breakpoints, "md")) {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+    }
+    &:nth-child(even) {
+      background-color: #f2f2f2;
+      .details__item-inner {
+        flex-direction: row-reverse;
+        @media (max-width: map-get($grid-breakpoints, "md")) {
+          flex-direction: column-reverse;
+        }
+        padding-top: 13px;
+      }
+      .details__item-text {
+        padding-left: 0;
+      }
+      .details__item-description {
+        padding-right: 20px;
+      }
+      .details__item-photo {
+        padding-left: 0;
+        img {
+          margin-left: -30px;
+        }
+      }
+    }
+    &-photo {
+      padding-left: 35px;
+      max-width: 100%;
+      img {
+        @media (max-width: map-get($grid-breakpoints, "xl")) {
+          width: 90%;
+        }
+      }
+      @media (max-width: map-get($grid-breakpoints, "md")) {
+        padding-left: 0;
+      }
+    }
+    &-text {
+      padding-top: 60px;
+      padding-left: 15px;
+      @media (max-width: map-get($grid-breakpoints, "md")) {
+        padding-left: 0;
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
+    }
+    &-subtitle {
+      @include section_subtitle();
+      padding-top: 10px;
+    }
+    &-title {
+      @include section_title();
+      padding-top: 8px;
+    }
+    &-description {
+      @include plain_text();
+      padding-top: 25px;
+      padding-right: 85px;
+      @media (max-width: map-get($grid-breakpoints, "lg")) {
+        padding-right: 45px;
+      }
+    }
+    &-benefits {
+      padding-top: 27px;
+    }
+    &-benefit {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: #000000;
+      margin-bottom: 6px;
+      span {
+        margin-left: 8px;
+        @include font_size-lh-fw(18px, 30px, 400);
+      }
+      img {
+        width: 17px;
+        height: 17px;
+        color: $primary;
+      }
+    }
+  }
+
+  &__separator {
+    @include title_separator();
+  }
+}

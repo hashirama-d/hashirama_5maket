@@ -14,25 +14,10 @@
     padding-top: 60px;
   }
   &__title {
-    @include font_size-lh-fw(36px, 48px, 600);
-    padding-top: 10px;
-    color: #000000;
-    @media (max-width: map-get($grid-breakpoints, "md")) {
-      @include font_size-lh-fw(26px, 36px, 600);
-    }
+    @include section_title();
   }
   &__separator {
-    margin-top: 22px;
-    position: relative;
-    @include width_height(42px, 2px);
-    background-color: $primary;
-    &::before {
-      position: absolute;
-      content: "";
-      @include width_height(2px, 2px);
-      left: calc(50% - 1px);
-      background-color: #ffffff;
-    }
+    @include title_separator();
   }
   &__items {
     padding-top: 43px;

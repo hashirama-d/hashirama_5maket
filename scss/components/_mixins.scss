@@ -20,11 +20,34 @@
   }
 }
 
+@mixin section_title() {
+  @include font_size-lh-fw(36px, 48px, 600);
+  padding-top: 10px;
+  color: #000000;
+  @media (max-width: map-get($grid-breakpoints, "md")) {
+    @include font_size-lh-fw(26px, 36px, 600);
+  }
+}
+
 @mixin plain_text() {
   padding-top: 20px;
   color: #999999;
   @include font_size-lh-fw(18px, 26px, 400);
   @media (max-width: map-get($grid-breakpoints, "lg")) {
     @include font_size-lh-fw(16px, 24px, 400);
+  }
+}
+
+@mixin title_separator() {
+  margin-top: 22px;
+  position: relative;
+  @include width_height(42px, 2px);
+  background-color: $primary;
+  &::before {
+    position: absolute;
+    content: "";
+    @include width_height(2px, 2px);
+    left: calc(50% - 1px);
+    background-color: #ffffff;
   }
 }
