@@ -1,4 +1,6 @@
 .details {
+  position: relative;
+  z-index: 10;
   &__item {
     padding-top: 45px;
     padding-bottom: 60px;
@@ -35,6 +37,9 @@
           margin-left: -30px;
         }
       }
+    }
+    &:last-child {
+      padding-bottom: 44px;
     }
     &-photo {
       padding-left: 35px;
