@@ -1,0 +1,91 @@
+.pricings {
+  //height: 1000px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
+  color: #000000;
+  &__subtitle {
+    @include section_subtitle();
+    padding-top: 54px;
+  }
+  &__title {
+    @include section_title();
+    padding-top: 8px;
+  }
+  &__separator {
+    @include title_separator();
+    margin-top: 24px;
+  }
+  &__plans {
+    column-gap: 27px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    row-gap: 27px;
+    @media (max-width: map-get($grid-breakpoints, "lg")) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__plan {
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    @media (max-width: map-get($grid-breakpoints, "lg")) {
+      width: 270px;
+    }
+    &:hover {
+
+      .pricings__plan-type {
+        color: $primary;
+        transition: .15s ease-in-out;
+      }
+      .pricings__plan-rate {
+        background-color: $primary;
+        color: #ffffff;
+        transition: .15s ease-in-out;
+      }
+      .pricings__plan-btn {
+        background-color: $primary;
+        color: #ffffff;
+      }
+    }
+    &-type {
+      width: 100%;
+      @include font_size-lh-fw(24px, 20px, 700);
+      text-transform: uppercase;
+      padding: 25px 0 25px;
+      border-bottom: 1px solid #e0e0e0;
+      @media (max-width: map-get($grid-breakpoints, "md")) {
+        @include font_size-lh-fw(20px, 16px, 700);
+      }
+    }
+    &-rate {
+      width: 100%;
+      padding: 40px 0 33px;
+      border-bottom: 1px solid #e0e0e0;
+      &-currency {
+        //padding-left: -2px;
+        @include font_size-lh-fw(28px, 28px, 600);
+      }
+      &-value {
+        @include font_size-lh-fw(60px, 40px, 600);
+      }
+      &-period {
+        @include plain_text();
+        display: block;
+        padding-top: 10px;
+      }
+    }
+    &-text {
+      @include plain_text();
+      padding: 45px 30px 40px;
+      span {
+        color: $primary;
+      }
+    }
+    &-btn {
+      border: 1px solid #e0e0e0;
+      margin-bottom: 28px;
+      color: $primary;
+    }
+  }
+}
