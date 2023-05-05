@@ -1,0 +1,27 @@
+.eyecatcher {
+  position: relative;
+  z-index: 10;
+  background-color: $dark;
+  padding: 60px 0;
+  @media (max-width: map-get($grid-breakpoints, "md")) {
+    padding: 40px 0;
+  }
+  &-title {
+    @include section_title();
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    span {
+      font-weight: 300;
+    }
+    @media (max-width: map-get($grid-breakpoints, "md")) {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+  &__buttons {
+    button + button {
+      margin-left: 20px;
+    }
+  }
+}

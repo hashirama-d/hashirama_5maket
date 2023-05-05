@@ -1,8 +1,9 @@
 .testimonials {
-  height: 980px; //temporary
+  //height: 980px; //temporary
   display: flex;
   position: relative;
   background-color: $section-bg-dark;
+  padding-bottom: 213px;
   &-bg-placeholder {
     position: absolute;
     @include width_height(100%, 930px);
@@ -13,17 +14,19 @@
     filter: blur(10px);
     z-index: 0;
     top: -50px;
-    @media (min-width: map-get($grid-breakpoints, "xl")) {
-      height: 100%;
+    @media (max-width: map-get($grid-breakpoints, "md")) {
+      height: calc(100% + 60px);
     }
+  }
+  &__inner {
+    position: relative;
+    z-index: 10;
   }
   &__top {
     padding-top: 55px;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 10;
   }
   &__subtitle {
     @include section_subtitle();
@@ -40,6 +43,7 @@
       background-color: #585759;
     }
   }
+
 }
 
 .carousel {
@@ -70,6 +74,9 @@
         padding-right: 20px;
         margin-bottom: 25px;
         margin-top: 87px;
+        @media (max-width: map-get($grid-breakpoints, "md")) {
+          text-align: center;
+        }
       }
       &-photo {
         margin-right: 25px;
