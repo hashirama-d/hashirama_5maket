@@ -79,8 +79,9 @@
                 <h2 class="features__title">List of amazing features</h2>
                 <div class="features__separator">
                 </div>
-                <div class="features__items row gx-5">
-                    <div class="features__item col-12 col-sm-6 col-lg-3 px-5 px-sm-4 d-flex flex-column align-items-center">
+                <div class="features__items row">
+                    <div
+                            class="features__item col-12 col-sm-6 col-lg-3 px-5 px-md-4 d-flex flex-column align-items-center">
                         <div class="features__item-logo d-flex justify-content-center align-items-center">
                             <img src="images/icons/Monitor.png" alt="" class="features__item-logo-img">
                         </div>
@@ -182,7 +183,7 @@
                     <div class="testimonials__title"> Pricings & Plans</div>
                     <div class="testimonials__separator"></div>
                 </div>
-                <div id="carouselExampleCaptions" class="testimonials__carousel carousel slide">
+                <div id="carouselExampleCaptions" class="testimonials__carousel carousel slide" data-bs-touch="true">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -419,6 +420,82 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="contact-us d-flex flex-column">
+        <div class="container gx-md-0">
+            <div class="contact-us__inner d-flex flex-column align-items-center">
+                <div class="contact-us__subtitle">Stay in touch</div>
+                <div class="contact-us__title">Contact us</div>
+                <div class="contact-us__separator"></div>
+                <div class="contact-us__info d-flex flex-sm-row flex-column justify-content-md-between
+                align-items-center align-items-md-start col-12">
+                    <div class="contact-us__info-item d-flex flex-column align-items-center">
+                        <div class="contact-us__info-icon">
+                            <img src="images/icons/Phone.png" alt="">
+                        </div>
+                        <div class="contact-us__info-text">
+                            <a href="tel:4151245678">Phone: (415) 124-5678</a><br>
+                            <a href="tel:4121238290">Fax: (412) 123-8290</a>
+                        </div>
+                    </div>
+                    <div class="contact-us__info-item d-flex flex-column align-items-center">
+                        <div class="contact-us__info-icon">
+                            <img src="images/icons/Pointer.png" alt="">
+                        </div>
+                        <div class="contact-us__info-text">
+                            <a href="https://www.google.com/maps/place/1001+Brickell+Bay+Dr/@25.7636111,-80.191163,17z/data=!3m2!4b1!5s0x88d9b14edaf3ebf1:0x8fed5c268d349639!4m6!3m5!1s0x88d9b6823a34e08f:0x3870de6e83186473!8m2!3d25.7636111!4d-80.1894444!16s%2Fg%2F11ddyj0r_s">
+                                1001 Brickell Bay Dr.<br>
+                                Suite 1900<br>
+                                Miami, FL 33131</a>
+                        </div>
+                    </div>
+                    <div class="contact-us__info-item d-flex flex-column align-items-center">
+                        <div class="contact-us__info-icon">
+                            <img src="images/icons/envelope.png" alt="">
+                        </div>
+                        <div class="contact-us__info-text">
+                            <a href="mailto:support@yourname.com">support@yourname.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="webform align-self-center" action="#" method="get">
+            <div class="webform__inner">
+                <div class="webform__content d-flex flex-column flex-sm-row">
+                    <div class="webform__left d-flex flex-column">
+                        <div class="webform__field">
+                            <label class="webform__label" for="name">Name</label>
+                            <input class="webform__input" type="text" id="name" name="name"
+                                   placeholder="Name *" required pattern="^\p{L}+$">
+                        </div>
+                        <div class="webform__field">
+                            <label class="webform__label" for="email">Subject</label>
+                            <input class="webform__input" type="email" id="email" name="email"
+                                   placeholder="Email *" required>
+                        </div>
+                        <div class="webform__field">
+                            <label class="webform__label" for="subject">Subject</label>
+                            <input class="webform__input" type="text" id="subject" name="subject"
+                                   placeholder="Subject *" required pattern="^\p{L}+$">
+                        </div>
+                    </div>
+                    <div class="webform__right">
+                        <div class="webform__field">
+                            <label class="webform__label" for="message"></label>
+                            <textarea class="webform__input" type="text" name="message" id="message"
+                            placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="webform__submit d-flex justify-content-end">
+                <input class="btn btn-primary" type="submit" value="Send message">
+            </div>
+        </form>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.210461398356!2d-80.19116295480812!3d25.76361108991095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6823a34e08f%3A0x3870de6e83186473!2s1001%20Brickell%20Bay%20Dr!5e0!3m2!1suk!2sua!4v1683552929880!5m2!1suk!2sua"
+                class="contact-us__map" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     <!--    Jquery CDN-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"

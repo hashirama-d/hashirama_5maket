@@ -1,0 +1,144 @@
+.contact-us {
+  background-color: #ededed;
+  padding-top: 50px;
+  position: relative;
+  &__inner {
+    margin-bottom: 365px;
+    text-align: center;
+    @media (max-width: map-get($grid-breakpoints, "sm")) {
+      margin-bottom: 450px;
+    }
+  }
+  &__subtitle {
+    @include section_subtitle();
+  }
+  &__title {
+    @include section_title();
+    padding-top: 7px;
+  }
+  &__separator {
+    @include title_separator();
+    margin-top: 25px;
+  }
+  &__info {
+    margin-top: 54px;
+    padding: 0 69px;
+    @media (max-width: map-get($grid-breakpoints, "lg")) {
+      padding: 0;
+    }
+    &-item {
+      width: 230px;
+      @media (max-width: map-get($grid-breakpoints, "sm")) {
+        margin-top: 30px;
+      }
+    }
+    &-icon {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+    }
+    &-text {
+      //text-align: center;
+      @include plain_text();
+      a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__map {
+    //width="600" height="450" style="border:0;"
+    width: 100%;
+    height: 370px;
+    border: 0;
+  }
+}
+
+.webform {
+  position: absolute;
+  background-color: $dark;
+  //width: 65.811965812%;
+  padding: 60px 70px 40px 65px;
+  width: 770px;
+  top: 422px;
+  @media (max-width: map-get($grid-breakpoints, "lg")) {
+    width: 570px;
+  }
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
+    width: 90%;
+    padding: 40px 50px 30px 45px;
+    top: 660px;
+  }
+
+  &__inner {
+
+  }
+  &__left, &__right {
+    width: 50%;
+    @media (max-width: map-get($grid-breakpoints, "sm")) {
+      width: 100%;
+
+    }
+  }
+  &__left {
+    row-gap: 20px;
+    margin-right: 20px;
+    @media (max-width: map-get($grid-breakpoints, "sm")) {
+      margin-right: 0;
+    }
+  }
+  &__right {
+    height: 100%;
+    margin-right: 15px;
+    @media (max-width: map-get($grid-breakpoints, "sm")) {
+      margin: 20px 0 0;
+    }
+    .webform__field {
+      height: 190px;
+    }
+  }
+  &__field {
+    position: relative;
+  }
+  &__label {
+    display: none;
+  }
+  &__input {
+    width: 100%;
+    padding: 17px;
+    background-color: $dark;
+    color: #ffffff;
+    border: 1px solid #444348;
+    line-height: 17px;
+    font-size: 14px;
+    font-weight: 600;
+    &[type="text"], &[type="email"] {
+      height: 50px;
+    }
+    &#message {
+      height: 100%;
+      resize: none;
+      line-height: 12px;
+      padding-left: 19px;
+      color: #ffffff;
+      &:focus {
+        outline: none;
+        border: 1px solid #444348;
+      }
+    }
+    &::placeholder {
+      font-weight: 700;
+      text-transform: uppercase;
+      opacity: 1;
+      color: #444348;
+    }
+  }
+  &__submit {
+    margin: 20px 15px 0;
+
+  }
+}
