@@ -1,8 +1,8 @@
+// testimonials block styles start here
 .testimonials {
-  //height: 980px; //temporary
   display: flex;
   position: relative;
-  background-color: $section-bg-dark;
+  background-color: $dark;
   padding-bottom: 213px;
   &-bg-placeholder {
     position: absolute;
@@ -45,6 +45,7 @@
   }
 }
 
+// carousel styles start here
 .carousel {
   &-indicators {
     bottom: -170px;
@@ -71,8 +72,7 @@
         @include font_size-lh-fw(24px, 32px, 400);
         font-style: italic;
         padding-right: 20px;
-        margin-bottom: 25px;
-        margin-top: 87px;
+        margin: 87px 0 25px;
         @media (max-width: map-get($grid-breakpoints, "md")) {
           text-align: center;
           @include font_size-lh-fw(20px, 26px, 400);

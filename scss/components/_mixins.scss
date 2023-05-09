@@ -12,7 +12,7 @@
 @mixin section_subtitle() {
   text-transform: uppercase;
   padding-top: 7px;
-  color: #008ed6;
+  color: $primary;
   letter-spacing: 0.1em;
   @include font_size-lh-fw(14px, 18px, 700);
   @media (max-width: map-get($grid-breakpoints, "lg")) {
@@ -23,7 +23,7 @@
 @mixin section_title() {
   @include font_size-lh-fw(36px, 48px, 600);
   padding-top: 10px;
-  color: #000000;
+  color: $heading-color;
   @media (max-width: map-get($grid-breakpoints, "md")) {
     @include font_size-lh-fw(26px, 36px, 600);
   }
@@ -31,7 +31,7 @@
 
 @mixin plain_text() {
   padding-top: 20px;
-  color: #999999;
+  color: $plain-text-color;
   @include font_size-lh-fw(18px, 26px, 400);
   @media (max-width: map-get($grid-breakpoints, "lg")) {
     @include font_size-lh-fw(16px, 24px, 400);

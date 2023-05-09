@@ -2,8 +2,7 @@
   position: relative;
   z-index: 10;
   &__item {
-    padding-top: 45px;
-    padding-bottom: 60px;
+    padding: 45px 0 60px;
     @media (max-width: map-get($grid-breakpoints, "md")) {
       padding-top: 25px;
     }
@@ -17,7 +16,7 @@
       }
     }
     &:nth-child(even) {
-      background-color: #f2f2f2;
+      background-color: $details-even-item-bg;
       .details__item-inner {
         flex-direction: row-reverse;
         @media (max-width: map-get($grid-breakpoints, "md")) {
@@ -54,12 +53,9 @@
       }
     }
     &-text {
-      padding-top: 60px;
-      padding-left: 15px;
+      padding: 60px 0 0 15px;
       @media (max-width: map-get($grid-breakpoints, "md")) {
-        padding-left: 0;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding: 20px 0;
       }
     }
     &-subtitle {
@@ -72,8 +68,7 @@
     }
     &-description {
       @include plain_text();
-      padding-top: 25px;
-      padding-right: 85px;
+      padding: 25px 85px 0 0;
       @media (max-width: map-get($grid-breakpoints, "lg")) {
         padding-right: 45px;
       }
@@ -85,15 +80,14 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      color: #000000;
+      color: $heading-color;
       margin-bottom: 6px;
       span {
         margin-left: 8px;
         @include font_size-lh-fw(18px, 30px, 400);
       }
       img {
-        width: 17px;
-        height: 17px;
+        @include width_height(17px, 17px);
         color: $primary;
       }
     }

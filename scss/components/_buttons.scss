@@ -1,25 +1,22 @@
 .btn {
   text-transform: uppercase;
-  color: #ffffff;
+  color: $text-on-primary;
   width: 160px;
   padding: 18px 25px;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 700;
+  @include font_size-lh-fw(14px, 14px, 700);
   border: 1px solid transparent;
   border-radius: 3px;
   @media (max-width: map-get($grid-breakpoints, "lg")) {
     width: 140px;
     padding: 18px;
-    font-size: 12px;
-    line-height: 12px;
+    @include font_size-lh-fw(12px, 12px, 700);
   }
   @media (max-width: map-get($grid-breakpoints, "sm")) {
     padding: 12px;
     width: 124px;
   }
   &:hover {
-    color: #ffffff;
+    color: $text-on-primary; // by default bootstrap changes color of btn on hover
     opacity: 0.9;
     border: 1px solid transparent;
     background-color: $primary;

@@ -20,16 +20,11 @@
     @include title_separator();
   }
   &__items {
-    padding-top: 43px;
-    padding-bottom: 70px;
-
+    padding: 43px 0 70px;
   }
   &__item {
     padding-top: 30px;
-    //background-color: red;
     text-align: center;
-    //border: 1px solid black;
-    //padding: 10px;
     &-logo {
       @include width_height(90px, 90px);
       border: 1px solid #e0e0e0;
@@ -41,7 +36,7 @@
     &-title {
       padding-top: 30px;
       @include font_size-lh-fw(24px, 24px, 400);
-      color: #000000;
+      color: $headings-color;
     }
     &-description {
       @include plain_text();

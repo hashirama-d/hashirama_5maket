@@ -1,9 +1,8 @@
 .pricings {
-  //height: 1000px;
-  background-color: #ffffff;
+  background-color: $light-bg;
   position: relative;
   z-index: 10;
-  color: #000000;
+  color: $heading-color;
   &__subtitle {
     @include section_subtitle();
     padding-top: 54px;
@@ -18,8 +17,7 @@
   }
   &__plans {
     column-gap: 27px;
-    padding-top: 70px;
-    padding-bottom: 60px;
+    padding: 70px 0 60px;
     row-gap: 27px;
     @media (max-width: map-get($grid-breakpoints, "lg")) {
       flex-wrap: wrap;
@@ -33,19 +31,18 @@
       width: 270px;
     }
     &:hover {
-
       .pricings__plan-type {
         color: $primary;
         transition: .15s ease-in-out;
       }
       .pricings__plan-rate {
         background-color: $primary;
-        color: #ffffff;
+        color: $text-on-primary;
         transition: .15s ease-in-out;
       }
       .pricings__plan-btn {
         background-color: $primary;
-        color: #ffffff;
+        color: $text-on-primary;
       }
     }
     &-type {
@@ -63,7 +60,6 @@
       padding: 40px 0 33px;
       border-bottom: 1px solid #e0e0e0;
       &-currency {
-        //padding-left: -2px;
         @include font_size-lh-fw(28px, 28px, 600);
       }
       &-value {

@@ -10,7 +10,7 @@
     @include section_title();
     margin: 0;
     padding: 0;
-    color: #ffffff;
+    color: $text-on-dark;
     span {
       font-weight: 300;
     }

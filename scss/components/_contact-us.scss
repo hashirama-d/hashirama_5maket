@@ -1,5 +1,6 @@
+// contact-us block styles start here
 .contact-us {
-  background-color: #ededed;
+  background-color: $contact-us-section-bg;
   padding-top: 50px;
   position: relative;
   &__inner {
@@ -33,13 +34,11 @@
       }
     }
     &-icon {
-      width: 45px;
-      height: 45px;
+      @include width_height(45px, 45px);
       display: flex;
       align-items: center;
     }
     &-text {
-      //text-align: center;
       @include plain_text();
       a {
         text-decoration: none;
@@ -51,17 +50,16 @@
     }
   }
   &__map {
-    //width="600" height="450" style="border:0;"
     width: 100%;
     height: 370px;
     border: 0;
   }
 }
 
+// contact form styles start here
 .webform {
   position: absolute;
   background-color: $dark;
-  //width: 65.811965812%;
   padding: 60px 70px 40px 65px;
   width: 770px;
   top: 422px;
@@ -72,10 +70,6 @@
     width: 90%;
     padding: 40px 50px 30px 45px;
     top: 660px;
-  }
-
-  &__inner {
-
   }
   &__left, &__right {
     width: 50%;
@@ -108,14 +102,13 @@
     display: none;
   }
   &__input {
+    border-radius: 3px;
     width: 100%;
     padding: 17px;
     background-color: $dark;
-    color: #ffffff;
-    border: 1px solid #444348;
-    line-height: 17px;
-    font-size: 14px;
-    font-weight: 600;
+    color: $text-on-dark;
+    border: 1px solid $form-outline;
+    @include font_size-lh-fw(14px, 17px, 600);
     &[type="text"], &[type="email"] {
       height: 50px;
     }
@@ -124,21 +117,20 @@
       resize: none;
       line-height: 12px;
       padding-left: 19px;
-      color: #ffffff;
+      color: $text-on-dark;
       &:focus {
         outline: none;
-        border: 1px solid #444348;
+        border: 1px solid $form-outline;
       }
     }
     &::placeholder {
       font-weight: 700;
       text-transform: uppercase;
       opacity: 1;
-      color: #444348;
+      color: $form-outline;
     }
   }
   &__submit {
     margin: 20px 15px 0;
-
   }
 }
