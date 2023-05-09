@@ -1,0 +1,23 @@
+.footer {
+  margin-top: auto;
+  background-color: $dark;
+  &__inner {
+    height: 160px;
+    padding-top: 50px;
+  }
+  &__links {
+    column-gap: 30px;
+  }
+  &__link {
+    img {
+      @include width_height(20px, 20px);
+    }
+  }
+  &__copyright {
+    text-transform: uppercase;
+    color: #444348;
+    text-align: center;
+    @include font_size-lh-fw(14px, 14px, 600);
+    margin-top: 28px;
+  }
+}

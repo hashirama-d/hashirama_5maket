@@ -18,7 +18,7 @@
     <title>Lucid - one page theme</title>
 </head>
 <body>
-    <header class="home">
+    <header class="home" id="home">
         <div class="home-bg-placeholder"></div>
         <div class="container gx-md-0">
             <div class="home__inner">
@@ -32,24 +32,24 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-0 mb-2 mb-lg-0 m-auto">
+                            <ul class="navbar-nav me-0 mb-2 mb-lg-0 m-auto navbar-nav-scroll">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#"><span>Home</span></a>
+                                    <a class="nav-link active" aria-current="page" href="#home"><span>Home</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Features</span></a>
+                                    <a class="nav-link" href="#features"><span>Features</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>About</span></a>
+                                    <a class="nav-link" href="#details"><span>About</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Testimonials</span></a>
+                                    <a class="nav-link" href="#testimonials"><span>Testimonials</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Pricing</span></a>
+                                    <a class="nav-link" href="#pricings"><span>Pricing</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Contact</span></a>
+                                    <a class="nav-link" href="#contact-us"><span>Contact</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -66,13 +66,13 @@
                         </div>
                     </div>
                     <div class="home__banner-photo col-md-6 col-sm-5">
-                        <img src="images/devices.png" alt="">
+                        <img src="images/devices.png" alt="Image of devices">
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
             <div class="features__inner">
                 <div class="features__subtitle">Product overview</div>
@@ -83,7 +83,7 @@
                     <div
                             class="features__item col-12 col-sm-6 col-lg-3 px-5 px-md-4 d-flex flex-column align-items-center">
                         <div class="features__item-logo d-flex justify-content-center align-items-center">
-                            <img src="images/icons/Monitor.png" alt="" class="features__item-logo-img">
+                            <img src="images/icons/Monitor.png" alt="Icon of a monitor" class="features__item-logo-img">
                         </div>
                         <div class="features__item-title">Responsive</div>
                         <div class="features__item-description">Fusce fermentum placerat magna ac pharetra. Aliquam
@@ -92,7 +92,7 @@
                     <div
                             class="features__item col-12 col-sm-6 col-lg-3 px-5 px-sm-4 d-flex flex-column align-items-center">
                         <div class="features__item-logo d-flex justify-content-center align-items-center">
-                            <img src="images/icons/Settings.png" alt="" class="features__item-logo-img">
+                            <img src="images/icons/Settings.png" alt="Icon of settings" class="features__item-logo-img">
                         </div>
                         <div class="features__item-title">Customizable</div>
                         <div class="features__item-description">Fusce fermentum placerat magna ac pharetra. Aliquam
@@ -101,7 +101,7 @@
                     <div
                             class="features__item col-12 col-sm-6 col-lg-3 px-5 px-sm-4 d-flex flex-column align-items-center">
                         <div class="features__item-logo d-flex justify-content-center align-items-center">
-                            <img src="images/icons/Like.png" alt="" class="features__item-logo-img">
+                            <img src="images/icons/Like.png" alt="Icon of thumb up" class="features__item-logo-img">
                         </div>
                         <div class="features__item-title">Lovely design</div>
                         <div class="features__item-description">Fusce fermentum placerat magna ac pharetra. Aliquam
@@ -110,7 +110,7 @@
                     <div
                             class="features__item col-12 col-sm-6 col-lg-3 px-5 px-sm-4 d-flex flex-column align-items-center">
                         <div class="features__item-logo d-flex justify-content-center align-items-center">
-                            <img src="images/icons/Phone.png" alt="" class="features__item-logo-img">
+                            <img src="images/icons/Phone.png" alt="Icon of phone" class="features__item-logo-img">
                         </div>
                         <div class="features__item-title">Mobile Friendly</div>
                         <div class="features__item-description">Fusce fermentum placerat magna ac pharetra. Aliquam
@@ -120,12 +120,12 @@
             </div>
         </div>
     </section>
-    <section class="details">
+    <section class="details" id="details">
         <div class="details__item">
             <div class="container gx-md-0">
                 <div class="details__item-inner">
                     <div class="details__item-photo col-md-6 col-sm-8 col-12 d-flex align-items-end justify-content-center justify-content-xl-start">
-                        <img src="images/devices.png" alt="">
+                        <img src="images/devices.png" alt="Image of devices">
                     </div>
                     <div class="details__item-text col-md-6 col-sm-8 col-12">
                         <div class="details__item-subtitle">Dip into the details</div>
@@ -134,19 +134,22 @@
                         <div class="details__item-description">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. </div>
                         <div class="details__item-benefits">
                             <div class="details__item-benefit">
-                                <img src="images/icons/cup.svg" alt="" class="details__item-benefit-icon">
+                                <img src="images/icons/cup.svg" alt="Icon of cup" class="details__item-benefit-icon">
                                 <span class="details__item-benefit-name">Awesome design</span>
                             </div>
                             <div class="details__item-benefit">
-                                <img src="images/icons/mouse.svg" alt="" class="details__item-benefit-icon">
+                                <img src="images/icons/mouse.svg" alt="Icon of mouse"
+                                     class="details__item-benefit-icon">
                                 <span class="details__item-benefit-name">Fully responsive</span>
                             </div>
                             <div class="details__item-benefit">
-                                <img src="images/icons/lightning.svg" alt="" class="details__item-benefit-icon">
+                                <img src="images/icons/lightning.svg" alt="Icon of lightning"
+                                     class="details__item-benefit-icon">
                                 <span class="details__item-benefit-name">Retina ready</span>
                             </div>
                             <div class="details__item-benefit">
-                                <img src="images/icons/speedometer.svg" alt="" class="details__item-benefit-icon">
+                                <img src="images/icons/speedometer.svg" alt="Icon of speedometer"
+                                     class="details__item-benefit-icon">
                                 <span class="details__item-benefit-name">Tons of features and easy to use</span>
                             </div>
                         </div>
@@ -158,7 +161,7 @@
             <div class="container gx-md-0">
                 <div class="details__item-inner">
                     <div class="details__item-photo col-md-7 col-sm-8 col-12 d-flex align-items-end justify-content-xl-end justify-content-center">
-                        <img src="images/device.png" alt="">
+                        <img src="images/device.png" alt="Image of a device">
                     </div>
                     <div class="details__item-text col-md-5 col-sm-8 col-12">
                         <div class="details__item-subtitle">Dip into the details</div>
@@ -174,7 +177,7 @@
         </div>
 
     </section>
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="testimonials-bg-placeholder"></div>
         <div class="container gx-md-0">
             <div class="testimonials__inner">
@@ -183,14 +186,17 @@
                     <div class="testimonials__title"> Pricings & Plans</div>
                     <div class="testimonials__separator"></div>
                 </div>
-                <div id="carouselExampleCaptions" class="testimonials__carousel carousel slide" data-bs-touch="true">
+                <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000"
+                     data-bs-touch="true">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"
                                 aria-label="Slide 4"></button>
                     </div>
+
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="carousel-item__inner d-flex flex-md-row flex-column">
@@ -202,7 +208,7 @@
                                     <div
                                             class="carousel-item__review-bottom d-flex align-items-center justify-content-center justify-content-md-start">
                                         <div class="carousel-item__review-photo">
-                                            <img src="images/user1.png" alt="">
+                                            <img src="images/user1.png" alt="Picture of user">
                                         </div>
                                         <div class="carousel-item__review-person d-flex flex-column ">
                                             <div class="carousel-item__review-name">John Doe</div>
@@ -217,7 +223,7 @@
                                     </div>
                                     <div class="carousel-item__review-bottom d-flex align-items-center justify-content-center justify-content-md-start">
                                         <div class="carousel-item__review-photo">
-                                            <img src="images/user2.png" alt="">
+                                            <img src="images/user2.png" alt="Picture of user">
                                         </div>
                                         <div class="carousel-item__review-person">
                                             <div class="carousel-item__review-name">Dean Winchester</div>
@@ -237,7 +243,7 @@
                                     <div
                                             class="carousel-item__review-bottom d-flex align-items-center justify-content-center justify-content-md-start">
                                         <div class="carousel-item__review-photo">
-                                            <img src="images/user1.png" alt="">
+                                            <img src="images/user1.png" alt="Picture of user">
                                         </div>
                                         <div class="carousel-item__review-person d-flex flex-column ">
                                             <div class="carousel-item__review-name">John Doe</div>
@@ -252,7 +258,7 @@
                                     </div>
                                     <div class="carousel-item__review-bottom d-flex align-items-center justify-content-center justify-content-md-start">
                                         <div class="carousel-item__review-photo">
-                                            <img src="images/user2.png" alt="">
+                                            <img src="images/user2.png" alt="Picture of user">
                                         </div>
                                         <div class="carousel-item__review-person">
                                             <div class="carousel-item__review-name">Dean Winchester</div>
@@ -272,7 +278,7 @@
                                     <div
                                             class="carousel-item__review-bottom d-flex align-items-center justify-content-center justify-content-md-start">
                                         <div class="carousel-item__review-photo">
-                                            <img src="images/user1.png" alt="">
+                                            <img src="images/user1.png" alt="Picture of user">
                                         </div>
                                         <div class="carousel-item__review-person d-flex flex-column ">
                                             <div class="carousel-item__review-name">John Doe</div>
@@ -287,7 +293,7 @@
                                     </div>
                                     <div class="carousel-item__review-bottom d-flex align-items-center justify-content-center justify-content-md-start">
                                         <div class="carousel-item__review-photo">
-                                            <img src="images/user2.png" alt="">
+                                            <img src="images/user2.png" alt="Picture of user">
                                         </div>
                                         <div class="carousel-item__review-person">
                                             <div class="carousel-item__review-name">Dean Winchester</div>
@@ -307,7 +313,7 @@
                                     <div
                                             class="carousel-item__review-bottom d-flex align-items-center justify-content-center justify-content-md-start">
                                         <div class="carousel-item__review-photo">
-                                            <img src="images/user1.png" alt="">
+                                            <img src="images/user1.png" alt="Picture of user">
                                         </div>
                                         <div class="carousel-item__review-person d-flex flex-column ">
                                             <div class="carousel-item__review-name">John Doe</div>
@@ -322,7 +328,7 @@
                                     </div>
                                     <div class="carousel-item__review-bottom d-flex align-items-center justify-content-center justify-content-md-start">
                                         <div class="carousel-item__review-photo">
-                                            <img src="images/user2.png" alt="">
+                                            <img src="images/user2.png" alt="Picture of user">
                                         </div>
                                         <div class="carousel-item__review-person">
                                             <div class="carousel-item__review-name">Dean Winchester</div>
@@ -350,7 +356,7 @@
             </div>
         </div>
     </section>
-    <section class="pricings">
+    <section class="pricings" id="pricings">
         <div class="container gx-md-0">
             <div class="pricings__inner d-flex flex-column align-items-center">
                 <div class="pricings__subtitle">Quality has its price</div>
@@ -421,7 +427,7 @@
             </div>
         </div>
     </section>
-    <section class="contact-us d-flex flex-column">
+    <section class="contact-us d-flex flex-column" id="contact-us">
         <div class="container gx-md-0">
             <div class="contact-us__inner d-flex flex-column align-items-center">
                 <div class="contact-us__subtitle">Stay in touch</div>
@@ -431,7 +437,7 @@
                 align-items-center align-items-md-start col-12">
                     <div class="contact-us__info-item d-flex flex-column align-items-center">
                         <div class="contact-us__info-icon">
-                            <img src="images/icons/Phone.png" alt="">
+                            <img src="images/icons/Phone.png" alt="Icon of phone">
                         </div>
                         <div class="contact-us__info-text">
                             <a href="tel:4151245678">Phone: (415) 124-5678</a><br>
@@ -440,7 +446,7 @@
                     </div>
                     <div class="contact-us__info-item d-flex flex-column align-items-center">
                         <div class="contact-us__info-icon">
-                            <img src="images/icons/Pointer.png" alt="">
+                            <img src="images/icons/Pointer.png" alt="Icon of pointer">
                         </div>
                         <div class="contact-us__info-text">
                             <a href="https://www.google.com/maps/place/1001+Brickell+Bay+Dr/@25.7636111,-80.191163,17z/data=!3m2!4b1!5s0x88d9b14edaf3ebf1:0x8fed5c268d349639!4m6!3m5!1s0x88d9b6823a34e08f:0x3870de6e83186473!8m2!3d25.7636111!4d-80.1894444!16s%2Fg%2F11ddyj0r_s">
@@ -451,7 +457,7 @@
                     </div>
                     <div class="contact-us__info-item d-flex flex-column align-items-center">
                         <div class="contact-us__info-icon">
-                            <img src="images/icons/envelope.png" alt="">
+                            <img src="images/icons/envelope.png" alt="Icon of envelope">
                         </div>
                         <div class="contact-us__info-text">
                             <a href="mailto:support@yourname.com">support@yourname.com</a>
@@ -489,13 +495,47 @@
                     </div>
                 </div>
             </div>
-            <div class="webform__submit d-flex justify-content-end">
+            <div class="webform__submit d-flex justify-content-sm-end justify-content-center">
                 <input class="btn btn-primary" type="submit" value="Send message">
             </div>
         </form>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.210461398356!2d-80.19116295480812!3d25.76361108991095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6823a34e08f%3A0x3870de6e83186473!2s1001%20Brickell%20Bay%20Dr!5e0!3m2!1suk!2sua!4v1683552929880!5m2!1suk!2sua"
                 class="contact-us__map" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="footer">
+        <div class="container gx-md-0">
+            <div class="footer__inner">
+                <div class="footer__links d-flex justify-content-center">
+                    <div class="footer__link">
+                        <a href="#">
+                            <img src="images/icons/behance.svg" alt="Behance icon">
+                        </a>
+                    </div>
+                    <div class="footer__link">
+                        <a href="#">
+                            <img src="images/icons/dribble.svg" alt="Dribble icon">
+                        </a>
+                    </div>
+                    <div class="footer__link">
+                        <a href="#">
+                            <img src="images/icons/twitter.svg" alt="Twitter icon">
+                        </a>
+                    </div>
+                    <div class="footer__link">
+                        <a href="#">
+                            <img src="images/icons/facebook.svg" alt="Facebook icon">
+                        </a>
+                    </div>
+                    <div class="footer__link">
+                        <a href="#">
+                            <img src="images/icons/linkedin.svg" alt="Linkedin icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__copyright">Copyright &copy; 2014 Lucid onepage theme</div>
+            </div>
+        </div>
     </section>
     <!--    Jquery CDN-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
