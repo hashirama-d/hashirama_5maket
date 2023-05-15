@@ -11,6 +11,9 @@
   &__link {
     img {
       @include width_height(20px, 20px);
+      &:hover {
+        filter: invert(59%) sepia(79%) saturate(5348%) hue-rotate(165deg) brightness(100%) contrast(104%);
+      }
     }
   }
   &__copyright {

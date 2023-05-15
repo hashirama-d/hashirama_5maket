@@ -11003,6 +11003,9 @@ body {
   width: 20px;
   height: 20px;
 }
+.footer__link img:hover {
+  filter: invert(59%) sepia(79%) saturate(5348%) hue-rotate(165deg) brightness(100%) contrast(104%);
+}
 .footer__copyright {
   text-transform: uppercase;
   color: #444348;
